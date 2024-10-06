@@ -1,4 +1,4 @@
-# Element Widget
+# Item Selector Widget
 
 Write a "widget" to select 3 elements from a certain list (initially set as an array). As test data, 300 elements with sequence numbers will be suitable - ["Element 1", "Element 2", "Element 3", ....].
 
