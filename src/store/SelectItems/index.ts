@@ -12,13 +12,16 @@ export interface SearchObject {
     filterValue: number
 }
 
-class Store {
+class ItemsSelectStore {
 
     selectedItems: Item[] = []
-    savedSelectedItems: Item[] = localStorage.getItem('savedSelectedItems') ? JSON.parse(localStorage.getItem('savedSelectedItems')!) : []
+    savedSelectedItems: Item[] = (
+        localStorage.getItem('savedSelectedItems') !== null &&
+        localStorage.getItem('savedSelectedItems') !== ''
+    ) ? JSON.parse(localStorage.getItem('savedSelectedItems')!) : []
 
     dialogOpen: boolean = false
-    
+
     searchObject: SearchObject = {
         searchValue: '',
         filterValue: 0
@@ -83,8 +86,7 @@ class Store {
         this.dialogOpen = true
         this.selectedItems = [...this.savedSelectedItems]
     }
-
 }
 
-const store = new Store()
-export default store
+const itemSelectStore = new ItemsSelectStore()
+export default itemSelectStore

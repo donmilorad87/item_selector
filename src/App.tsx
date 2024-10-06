@@ -1,18 +1,16 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
+import ItemSelector from "@ItemSelector/ItemSelector"
 
 import './App.scss'
 
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import ItemSelector from "./Components/ItemSelector/ItemSelector"
+const App = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<ItemSelector />} />
+    </Routes>
+  </BrowserRouter>
+)
 
-function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<ItemSelector />} />
-      </Routes>
-    </BrowserRouter>
-  )
-}
 
 export default App

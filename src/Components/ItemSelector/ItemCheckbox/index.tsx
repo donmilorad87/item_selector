@@ -1,13 +1,18 @@
-import store, { Item } from "../../store"
+import itemSelectStore, { Item } from "@store/SelectItems"
 
-import checkbox from "../../assets/images/checkbox.png"
+import checkbox from "@assets/images/checkbox.png"
+
 import './ItemCheckbox.scss'
 
 const ItemSelectorCheckbox = ({ item }: { item: Item }) => {
 
     const selectItem = () => {
         item.checked = !item.checked
-        item.checked ? store.addItem(item) : store.removeItem(item)
+        if (item.checked) {
+            itemSelectStore.addItem(item)
+        } else {
+            itemSelectStore.removeItem(item)
+        }
     }
 
     return (

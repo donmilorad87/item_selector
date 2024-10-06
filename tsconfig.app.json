@@ -18,7 +18,16 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* Path for import */
+
+    "baseUrl": "./",
+    "paths": {
+      "@ItemSelector/*": ["src/Components/ItemSelector/*"],
+      "@store/*": ["src/store/*"],
+      "@assets/*": ["src/assets/*"]
+    }
   },
   "include": ["src"]
 }
