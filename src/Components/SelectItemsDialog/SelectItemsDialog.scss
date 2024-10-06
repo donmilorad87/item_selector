@@ -1,0 +1,91 @@
+.dialog {
+  padding: 20px;
+  background-color: #373737;
+  position: relative;
+  &_container {
+    list-style: none;
+    max-height: 266px;
+    overflow-y: auto;
+    &_items_list {
+      padding: 2.5px 0;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      background: #141414;
+      &.dark {
+        background: #141414;
+        padding: 7.5px 20px;
+      }
+    }
+  }
+  &_text {
+    line-height: 21px;
+    text-align: left;
+    color: #ffffff;
+    &.h2{
+      font-size: 20px;
+      font-weight: 500;
+    }
+    &.label {
+      @media (min-width: 0px) {
+        min-width: 10ch;
+      }
+      @media (min-width: 500px) {
+        min-width: unset;
+      }
+    }
+  }
+  &_close_button {
+    border: 0;
+    margin-left: auto;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+
+    &:hover {
+      img {
+        transition: scale 0.3s ease;
+        scale: 1.25;
+      }
+    }
+  }
+
+  &_input {
+    appearance: none;
+
+    height: 20px;
+    padding: 0 5px;
+    border: 0;
+    @media (min-width: 0px) {
+      width: 100%;
+    }
+    @media (min-width: 500px) {
+      width: 150px;
+    }
+
+    &:focus-within {
+      outline: none;
+    }
+  }
+
+  &_clear_search_input,
+  &_clear_filter_input {
+    filter: invert(100%);
+    position: absolute;
+    right: -1rem;
+    top: calc((100% - 8px) / 2);
+    transition: 0.3s;
+    cursor: pointer;
+    &.show {
+      right: 0.25rem;
+    }
+    &:hover {
+      transition: scale 0.3s ease;
+      scale: 1.25;
+    }
+  }
+}

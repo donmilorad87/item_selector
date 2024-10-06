@@ -1,0 +1,60 @@
+.df {
+  display: flex;
+}
+.dn {
+  display: none;
+}
+.jcsb {
+  justify-content: space-between;
+}
+.jcc {
+  justify-content: center;
+}
+.fdc {
+  flex-direction: column;
+}
+.g7px {
+  gap: 7px;
+}
+.g10px {
+  gap: 10px;
+}
+.g15px {
+  gap: 15px;
+}
+.mt6px {
+  margin-top: 6px;
+}
+.mt8px{
+  margin-top: 8px;
+}
+.mb6px{
+  margin-bottom: 6px;
+}
+.pRel {
+  position: relative;
+}
+.oh {
+  overflow: hidden;
+}
+.pon {
+  pointer-events: none;
+}
+.fww {
+  flex-wrap: wrap;
+}
+.f1 {
+  flex: 1;
+}
+
+@media (min-width: 0px) {
+  .fdcResMob {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 500px) {
+  .fdcResMob {
+    flex-direction: row;
+  }
+}

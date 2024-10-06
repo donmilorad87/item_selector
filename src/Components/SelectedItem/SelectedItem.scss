@@ -1,0 +1,36 @@
+.selected_item {
+  display: flex;
+  align-items: center;
+  color: white;
+  background: #121212;
+  
+  
+  text-align: left;
+  width: 142px;
+  height: 30px;
+  &.dialog_items {
+    width: 140px;
+  }
+  &_paragraf {
+    padding: 0px 0px 0px 10px;
+  }
+  &_remove {
+    height: 100%;
+    padding: 0px 10px;
+    border: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    margin-left: auto;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+      img {
+        transition: scale 0.3s ease;
+        scale: 1.25;
+      }
+    }
+  }
+}

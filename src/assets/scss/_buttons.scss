@@ -1,0 +1,27 @@
+.button {
+  
+  
+  text-align: left;
+  color: white;
+  border: none;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    text-decoration: underline;
+  }
+  &.green {
+    background: #519f03;
+  }
+  &.red {
+    background: #9f2903;
+  }
+  &.choice_button {
+    width: 162px;
+  }
+  &.dialog_button {
+    width: 90px;
+  }
+}

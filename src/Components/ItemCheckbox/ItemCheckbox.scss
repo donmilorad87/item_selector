@@ -1,0 +1,42 @@
+.item_checkbox {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  padding: 7.5px 20px;
+  background: #141414;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    &:hover {
+      background-color: #141414;
+    }
+  }
+
+  &_paragraf {
+    color: white;
+    font-size: 12px;
+
+    line-height: 14.06px;
+    text-align: left;
+  }
+  &_checkbox {
+    background-color: white;
+    width: 13px;
+    height: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    &_image {
+      width: 29px;
+      height: auto;
+      transform: translate(0px, 1px);
+    }
+  }
+}
