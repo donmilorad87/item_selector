@@ -21,15 +21,15 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
-#### To run this project you will need *node.js* and *npm* installed on your local machine.
+## To run this project you will need *node.js* and *npm* installed on your local machine.
 
-- First install node project with node package manager with command:
+- First install **node** project with **node package manager** with command:
 
 ```js
 npm install
 ```
 
-- After project dependancies are installed you will be able to **run** project with this command:
+- After project dependancies are installed you will be able to **run dev** project with this command:
 
 ```js
 npm run dev
