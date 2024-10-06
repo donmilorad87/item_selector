@@ -12,6 +12,7 @@ import "./SelectItemsDialog.scss"
 const SelectItemsDialogForObserver = () => {
 
     const selectedItems = itemSelectStore.selectedItems
+    const savedSelectedItems = itemSelectStore.savedSelectedItems
 
     const dialogOpen = itemSelectStore.dialogOpen
 
@@ -97,6 +98,10 @@ const SelectItemsDialogForObserver = () => {
         itemSelectStore.closeDialog()
     }
 
+    const compareSelectedItemsAndSavedSelectedItems = () => {
+        return JSON.stringify(selectedItems) === JSON.stringify(savedSelectedItems)
+    }
+
     return (
         <>
             {dialogOpen && (
@@ -138,7 +143,7 @@ const SelectItemsDialogForObserver = () => {
                     </div>
 
                     <div className="df g10px fww">
-                        <button type="button" className="button green dialog_button" onClick={saveSelectedItems}>Save</button>
+                        <button type="button" className={`button green dialog_button ${compareSelectedItemsAndSavedSelectedItems() ? 'disabled' : ''}`} onClick={saveSelectedItems} disabled={compareSelectedItemsAndSavedSelectedItems()}>Save</button>
                         <button type="button" className="button red dialog_button" onClick={closeDialog}>Cancel</button>
                     </div>
                 </div>
